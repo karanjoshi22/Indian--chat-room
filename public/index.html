@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Chat Room</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!-- Chat Header -->
+    <header class="header-container">
+        <h1>Indian Chat Room</h1>
+    </header>
+
+    <!-- Chat Window -->
+    <main class="chat-container">
+        <div class="messages" id="messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="message-input">
+            <input type="text" id="message" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <p>&copy; 2025 Global Chat. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
