@@ -1,20 +1,20 @@
-const socket = io(); // सर्वर से कनेक्शन बनाएँ
+const socket = io(); // Establish connection with the server
 
-// मैसेज भेजने के लिए
+// To send a message
 function sendMessage() {
     const input = document.querySelector('#message');
     const message = input.value;
 
     if (message.trim() !== '') {
-        socket.emit('chat message', message); // सर्वर को मैसेज भेजें
-        input.value = ''; // इनपुट फील्ड खाली करें
+        socket.emit('chat message', message); // Send the message to the server
+        input.value = ''; // Clear the input field
     }
 }
 
-// सर्वर से मैसेज प्राप्त करें
+// Receive messages from the server
 socket.on('chat message', (msg) => {
     const messages = document.querySelector('#messages');
     const li = document.createElement('li');
     li.textContent = msg;
-    messages.appendChild(li); // मैसेज लिस्ट में जोड़ें
+    messages.appendChild(li); // Add the message to the list
 });
