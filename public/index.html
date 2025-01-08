@@ -7,28 +7,12 @@
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-    <!-- Chat Header -->
-    <header class="header-container">
+    <div class="chat-container">
         <h1>Indian Chat Room</h1>
-    </header>
-
-    <!-- Chat Window -->
-    <main class="chat-container">
-        <div class="messages" id="messages">
-            <!-- Chat messages will appear here -->
-        </div>
-        <div class="message-input">
-            <input type="text" id="message" placeholder="Type your message here..." />
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-container">
-        <p>&copy; 2025 Global Chat. All rights reserved.</p>
-    </footer>
-
-    <!-- External JavaScript file -->
+        <ul id="messages"></ul>
+        <input id="message" type="text" placeholder="Type a message..." autocomplete="off">
+        <button onclick="sendMessage()">Send</button>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="chat.js"></script>
 </body>
